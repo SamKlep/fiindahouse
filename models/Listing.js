@@ -2,11 +2,11 @@ import mongoose from 'mongoose'
 import slugify from 'slugify'
 
 const ListingSchema = new mongoose.Schema({
-  realtor: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Realtor',
-    required: true,
-  },
+  // realtor: {
+  //   type: mongoose.Schema.ObjectId,
+  //   ref: 'Realtor',
+  //   required: true,
+  // },
   title: {
     type: String,
     required: [true, 'Please add a title'],
@@ -35,19 +35,6 @@ const ListingSchema = new mongoose.Schema({
       type: Number,
       required: [true, 'Please add a zipcode'],
     },
-  },
-  careers: {
-    // Array of strings
-    type: [String],
-    required: true,
-    enum: [
-      'Web Development',
-      'Mobile Development',
-      'UI/UX',
-      'Data Science',
-      'Business',
-      'Other',
-    ],
   },
   price: {
     type: Number,
@@ -103,11 +90,11 @@ const ListingSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  user: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'User',
-    required: true,
-  },
+  // user: {
+  //   type: mongoose.Schema.ObjectId,
+  //   ref: 'User',
+  //   required: true,
+  // },
 })
 
 // Create bootcamp slug from the name
