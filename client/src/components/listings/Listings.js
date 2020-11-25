@@ -38,7 +38,7 @@ const Listings = () => {
             <div class='col-md-6 col-lg-4 mb-4'>
               <div class='card listing-preview'>
                 <img class='card-img-top' src='' alt='' />
-                  <div class='card-img-overlay' >
+                <div class='card-img-overlay'>
                   <h2>
                     <span class='badge badge-secondary text-white'>$</span>
                   </h2>
@@ -46,84 +46,85 @@ const Listings = () => {
                 <div class='card-body'>
                   <div class='listing-heading text-center'>
                     <h4 class='text-primary'>Title</h4>
-                 
-                  <p>
-                    <i class='fas fa-map-marker text-secondary'></i>{' '}
-                  </p>
+
+                    <p>
+                      <i class='fas fa-map-marker text-secondary'></i>{' '}
+                    </p>
+                  </div>
+                  <hr />
+                  <div class='row py-2 text-secondary'>
+                    <div class='col-6'>
+                      <i class='fas fa-th-large'></i> Sqft:{' '}
+                    </div>
+                    <div class='col-6'>
+                      <i class='fas fa-car'></i> Garage:{' '}
+                    </div>
+                  </div>
+                  <div class='row py-2 text-secondary'>
+                    <div class='col-6'>
+                      <i class='fas fa-bed'></i> Bedrooms:{' '}
+                    </div>
+                    <div class='col-6'>
+                      <i class='fas fa-bath'></i> Bathrooms:{' '}
+                    </div>
+                  </div>
+                  <hr />
+                  <div class='row py-2 text-secondary'>
+                    <div class='col-12'>
+                      <i class='fas fa-user'></i>{' '}
+                    </div>
+                  </div>
+                  <div class='row text-secondary pb-2'>
+                    <div class='col-6'>
+                      <i class='fas fa-clock'></i>{' '}
+                    </div>
+                  </div>
+                  <hr />
+                  <a href='' class='btn btn-primary btn-block'>
+                    More Info
+                  </a>
                 </div>
-                <hr />
-                <div class='row py-2 text-secondary'>
-                  <div class='col-6'>
-                    <i class='fas fa-th-large'></i> Sqft:{' '}
-                  </div>
-                  <div class='col-6'>
-                    <i class='fas fa-car'></i> Garage:{' '}
-                  </div>
-                </div>
-                <div class='row py-2 text-secondary'>
-                  <div class='col-6'>
-                    <i class='fas fa-bed'></i> Bedrooms:{' '}
-                  </div>
-                  <div class='col-6'>
-                    <i class='fas fa-bath'></i> Bathrooms:{' '}
-                  </div>
-                </div>
-                <hr />
-                <div class='row py-2 text-secondary'>
-                  <div class='col-12'>
-                    <i class='fas fa-user'></i>{' '}
-                  </div>
-                </div>
-                <div class='row text-secondary pb-2'>
-                  <div class='col-6'>
-                    <i class='fas fa-clock'></i>{' '}
-                  </div>
-                </div>
-                <hr />
-                <a href='' class='btn btn-primary btn-block'>
-                  More Info
-                </a>
               </div>
             </div>
-          </div>
 
-          <div class='col-md-12'>
-            <p>No Listings Available</p>
-          </div>
-
-          <div class='row'>
             <div class='col-md-12'>
-              <ul class='pagination'>
-                <li class='page-iitem'>
-                  <a
-                    href='?page={{listings.previous_page_number}}'
-                    class='page-link'>
-                    &laquo;
-                  </a>
-                </li>
+              <p>No Listings Available</p>
+            </div>
 
-                <li class='page-item disabled'>
-                  <a class='page-link'>&laquo;</a>
-                </li>
+            <div class='row'>
+              <div class='col-md-12'>
+                <ul class='pagination'>
+                  <li class='page-iitem'>
+                    <a
+                      href='?page={{listings.previous_page_number}}'
+                      class='page-link'>
+                      &laquo;
+                    </a>
+                  </li>
 
-                <li class='page-item active'>
-                  <a class='page-link'></a>
-                </li>
+                  <li class='page-item disabled'>
+                    <a class='page-link'>&laquo;</a>
+                  </li>
 
-                <li class='page-item'>
-                  <a href='?page={{i}}' class='page-link'></a>
-                </li>
+                  <li class='page-item active'>
+                    <a class='page-link'></a>
+                  </li>
 
-                <li class='page-iitem'>
-                  <a href='?page=' class='page-link'>
-                    &raquo;
-                  </a>
-                </li>
+                  <li class='page-item'>
+                    <a href='?page={{i}}' class='page-link'></a>
+                  </li>
 
-                <li class='page-item disabled'>
-                  <a class='page-link'>&raquo;</a>
-                </li>
-              </ul>
+                  <li class='page-iitem'>
+                    <a href='?page=' class='page-link'>
+                      &raquo;
+                    </a>
+                  </li>
+
+                  <li class='page-item disabled'>
+                    <a class='page-link'>&raquo;</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

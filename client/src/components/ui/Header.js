@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navbar, Nav, Image } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -44,17 +45,17 @@ const Header = () => {
           <Nav className='mr-auto'>
             <Nav.Link href='/'>Home</Nav.Link>
             <Nav.Link href='/about'>About</Nav.Link>
-            <Nav.Link href='/featured'>Featured Listings</Nav.Link>
+            <Nav.Link href='/listings'>Featured Listings</Nav.Link>
           </Nav>
           <Nav.Link>
-            <a className='nav-link' href='/register'>
+            <Link className='nav-link' to='/register'>
               <i className='fas fa-user-plus'></i> Register
-            </a>
+            </Link>
           </Nav.Link>
           <Nav.Link>
-            <a className='nav-link' href='/login'>
+            <Link className='nav-link' to='/login'>
               <i className='fas fa-sign-in-alt'></i> Login
-            </a>
+            </Link>
           </Nav.Link>
         </Navbar.Collapse>
       </Navbar>
