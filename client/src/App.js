@@ -7,6 +7,7 @@ import ListingsScreen from './components/screens/ListingsScreen'
 import LoginScreen from './components/screens/LoginScreen'
 import RegisterScreen from './components/screens/RegisterScreen'
 import ListingScreen from './components/screens/ListingScreen'
+import ListingItem from './components/screens/ListingItem'
 import DashboardScreen from './components/screens/DashboardScreen'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={HomeScreen} />
         <Route exact path='/about' component={AboutScreen} />
+        <Route exact path='/listing/:id' component={ListingItem} />
         <Route exact path='/listing' component={ListingScreen} />
         <Route exact path='/listings' component={ListingsScreen} />
         <Route exact path='/login' component={LoginScreen} />

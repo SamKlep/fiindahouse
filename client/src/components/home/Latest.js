@@ -1,9 +1,11 @@
 import React from 'react'
+import LatestContainer from './LatestContainer'
 
 const Latest = () => {
   return (
     <div>
-      <section id='listings' class='py-5'>
+      <LatestContainer />
+      {/* <section id='listings' class='py-5'>
         <div class='container'>
           <h3 class='text-center mb-3'>Latest Listings</h3>
           <div class='row'>
@@ -64,7 +66,7 @@ const Latest = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }
