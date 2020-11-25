@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './components/ui/Header'
-import HomeScreen from './components/pages/HomeScreen'
+import HomeScreen from './components/screens/HomeScreen'
 
 function App() {
   return (

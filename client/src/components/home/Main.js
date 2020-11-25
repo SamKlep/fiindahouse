@@ -1,9 +1,11 @@
 import React from 'react'
 
-const HomeScreen = () => {
+const Main = () => {
   return (
     <div>
-      <section id='showcase'>
+      <section
+        id='showcase'
+        style={{ backgroundImage: "url('img/showcase.jpeg')" }}>
         <div className='container text-center'>
           <div className='home-search p-5'>
             <div className='overlay p-5'>
@@ -84,4 +86,4 @@ const HomeScreen = () => {
   )
 }
 
-export default HomeScreen
+export default Main
