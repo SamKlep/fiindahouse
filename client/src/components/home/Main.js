@@ -5,7 +5,7 @@ const Main = () => {
     <div>
       <section
         id='showcase'
-        style={{ backgroundImage: "url('img/showcase.jpeg')" }}>
+        style={{ backgroundImage: "url('img/showcase.jpeg') " }}>
         <div className='container text-center'>
           <div className='home-search p-5'>
             <div className='overlay p-5'>
