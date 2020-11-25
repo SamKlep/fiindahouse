@@ -28,9 +28,7 @@ const LatestContainer = () => {
 
   return (
     <div className='container mt-3 text-center'>
-      <Jumbotron>
-        <h1 className='text-danger'>Latest Listings</h1>
-      </Jumbotron>
+      <h1 className='text-dark'>Latest Listings</h1>
 
       <Row>
         <br />
