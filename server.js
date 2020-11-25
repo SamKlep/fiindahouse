@@ -17,6 +17,9 @@ const app = express()
 // Body parser
 app.use(express.json())
 
+// Set static folder
+app.use(express.static(path.join(import.meta.url, 'public')))
+
 app.get('/', (req, res) => {
   res.send('API is running...')
 })

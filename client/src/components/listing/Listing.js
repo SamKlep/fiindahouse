@@ -15,11 +15,13 @@ const Listing = () => {
               <div className='row mb-5 thumbs'>
                 <div className='col-md-2'>
                   <a href='/' data-lightbox='home-images'>
-                    <img
-                      src='{{ listing.photo_1.url }}'
-                      alt=''
-                      className='img-fluid'
-                    />
+                    <img src='' alt='' className='img-fluid' />
+                  </a>
+                </div>
+
+                <div className='col-md-2'>
+                  <a href='/' data-lightbox='home-images'>
+                    <img src='' alt='' className='img-fluid' />
                   </a>
                 </div>
 
@@ -36,38 +38,14 @@ const Listing = () => {
                 </div>
 
                 <div className='col-md-2'>
-                  <a
-                    href='{{ listing.photo_4.url }}'
-                    data-lightbox='home-images'>
-                    <img
-                      src='{{ listing.photo_4.url }}'
-                      alt=''
-                      className='img-fluid'
-                    />
+                  <a href='/' data-lightbox='home-images'>
+                    <img src='' alt='' className='img-fluid' />
                   </a>
                 </div>
 
                 <div className='col-md-2'>
-                  <a
-                    href='{{ listing.photo_5.url }}'
-                    data-lightbox='home-images'>
-                    <img
-                      src='{{ listing.photo_5.url }}'
-                      alt=''
-                      className='img-fluid'
-                    />
-                  </a>
-                </div>
-
-                <div className='col-md-2'>
-                  <a
-                    href='{{ listing.photo_6.url }}'
-                    data-lightbox='home-images'>
-                    <img
-                      src='{{ listing.photo_6.url }}'
-                      alt=''
-                      className='img-fluid'
-                    />
+                  <a href='/' data-lightbox='home-images'>
+                    <img src='img/' alt='' className='img-fluid' />
                   </a>
                 </div>
               </div>
@@ -98,19 +76,19 @@ const Listing = () => {
                   <ul className='list-group list-group-flush'>
                     <li className='list-group-item text-secondary'>
                       <i className='fas fa-th-large'></i> Square Feet:
-                      <span className='float-right'></span>
+                      <span className='float-right'> #</span>
                     </li>
                     <li className='list-group-item text-secondary'>
                       <i className='fas fa-square'></i> Lot Size:
-                      <span className='float-right'></span>
+                      <span className='float-right'>#</span>
                     </li>
                     <li className='list-group-item text-secondary'>
                       <i className='fas fa-calendar'></i> Listing Date:
-                      <span className='float-right'></span>
+                      <span className='float-right'>Date</span>
                     </li>
                     <li className='list-group-item text-secondary'>
                       <i className='fas fa-bed'></i> Realtor:
-                      <span className='float-right'></span>
+                      <span className='float-right'>Name</span>
                     </li>
                   </ul>
                 </div>
