@@ -1,9 +1,9 @@
 import mongoose from 'mongoose'
 import slugify from 'slugify'
 
-const ListingSchema = new mongoose.Schema({
+const listingSchema = mongoose.Schema({
   // realtor: {
-  //   type: mongoose.Schema.ObjectId,
+  //   type: mongoose.Schema.Types.ObjectId,
   //   ref: 'Realtor',
   //   required: true,
   // },
@@ -91,17 +91,17 @@ const ListingSchema = new mongoose.Schema({
     default: Date.now,
   },
   // user: {
-  //   type: mongoose.Schema.ObjectId,
+  //   type: mongoose.Schema.Types.ObjectId,
   //   ref: 'User',
   //   required: true,
   // },
 })
 
 // Create bootcamp slug from the name
-ListingSchema.pre('save', function (next) {
+listingSchema.pre('save', function (next) {
   this.slug = slugify(this.title, { lower: true })
   next()
 })
 
-const Listing = mongoose.model('Listing', ListingSchema)
+const Listing = mongoose.model('Listing', listingSchema)
 export default Listing

@@ -14,14 +14,28 @@ const LatestListItem = ({ listing }) => {
             fluid
           />
         </Link>
+        <Card.ImgOverlay>
+          <Card.Title>
+            <span className='badge badge-info text-white'>
+              ${listing.price}
+            </span>
+          </Card.Title>
+        </Card.ImgOverlay>
         <Card.Body>
           <Link to={`/serials/${listing._id}`}>
             <Card.Title as='div'>
               <strong>
-                <h4 className='serial-links'>{listing.title}</h4>
+                <h4>{listing.title}</h4>
               </strong>
             </Card.Title>
           </Link>
+          <p>
+            <i className='fas fa-map-marker text-secondary'></i>
+            {listing.address.street}
+            {listing.address.city}
+            {listing.address.state}
+            {listing.address.zipcode}
+          </p>
         </Card.Body>
       </Card>
     </Container>
