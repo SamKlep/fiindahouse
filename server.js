@@ -16,6 +16,7 @@ connectDB()
 import listingRoutes from './routes/listingRoutes.js'
 import realtorRoutes from './routes/realtorRoutes.js'
 import userRoutes from './routes/userRoutes.js'
+import authRoutes from './routes/authRoutes.js'
 
 const app = express()
 
@@ -32,6 +33,7 @@ app.get('/', (req, res) => {
 app.use('/api/listings', listingRoutes)
 app.use('/api/realtors', realtorRoutes)
 app.use('/api/users', userRoutes)
+app.use('/api/auth', authRoutes)
 
 app.use(notFound)
 

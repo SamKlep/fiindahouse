@@ -1,5 +1,4 @@
 import crypto from 'crypto'
-import ErrorResponse from '../utils/errorResponse'
 import asyncHandler from 'express-async-handler'
 import User from '../models/User.js'
 
@@ -17,7 +16,7 @@ const register = asyncHandler(async (req, res, next) => {
     isAdmin,
   })
 
-  sendTokenResponse(user, 200, res)
+  res.status(200).json({ success: true, data: user })
 })
 
 // @desc      Login user
@@ -45,7 +44,7 @@ const login = asyncHandler(async (req, res, next) => {
     return next(new Error('Invalid credentials', 401))
   }
 
-  sendTokenResponse(user, 200, res)
+  res.status(200).json({ success: true, data: user })
 })
 
 // @desc      Log user out / clear cookie
@@ -63,54 +62,4 @@ const logout = asyncHandler(async (req, res, next) => {
   })
 })
 
-// @desc      Get current logged in user
-// @route     GET /api/v1/auth/me
-// @access    Private
-const getMe = asyncHandler(async (req, res, next) => {
-  // user is already available in req due to the protect middleware
-  const user = req.user
-
-  res.status(200).json({
-    success: true,
-    data: user,
-  })
-})
-
-// @desc      Update user details
-// @route     PUT /api/v1/auth/updatedetails
-// @access    Private
-const updateDetails = asyncHandler(async (req, res, next) => {
-  const fieldsToUpdate = {
-    name: req.body.name,
-    email: req.body.email,
-  }
-
-  const user = await User.findByIdAndUpdate(req.user.id, fieldsToUpdate, {
-    new: true,
-    runValidators: true,
-  })
-
-  res.status(200).json({
-    success: true,
-    data: user,
-  })
-})
-
-// @desc      Update password
-// @route     PUT /api/v1/auth/updatepassword
-// @access    Private
-const updatePassword = asyncHandler(async (req, res, next) => {
-  const user = await User.findById(req.user.id).select('+password')
-
-  // Check current password
-  if (!(await user.matchPassword(req.body.currentPassword))) {
-    return next(new Error('Password is incorrect', 401))
-  }
-
-  user.password = req.body.newPassword
-  await user.save()
-
-  sendTokenResponse(user, 200, res)
-})
-
-export { register, login, logout, updateDetails, getMe, updatePassword }
+export { register, login, logout }
