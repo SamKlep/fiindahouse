@@ -33,7 +33,7 @@ const LatestContainer = () => {
       <Row>
         <br />
         <Col>
-          <section className='cards'>
+          <section className='card-columns'>
             {data.map((listing, _id) => (
               <LatestListItem key={_id} listing={listing} />
             ))}
