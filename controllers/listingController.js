@@ -16,7 +16,7 @@ const getListings = asyncHandler(async (req, res) => {
 const getListingById = asyncHandler(async (req, res) => {
   const listing = await Listing.findById(req.params.id)
 
-  if (product) {
+  if (listing) {
     res.json(listing)
   } else {
     res.status(404)

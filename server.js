@@ -14,6 +14,8 @@ connectDB()
 
 // Route files
 import listingRoutes from './routes/listingRoutes.js'
+import realtorRoutes from './routes/realtorRoutes.js'
+import userRoutes from './routes/userRoutes.js'
 
 const app = express()
 
@@ -28,6 +30,12 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/listings', listingRoutes)
+app.use('/api/realtors', realtorRoutes)
+app.use('/api/users', userRoutes)
+
+app.use(notFound)
+
+app.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
 
