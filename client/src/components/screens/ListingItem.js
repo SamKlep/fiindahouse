@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Container } from 'react-bootstrap'
+import { SRLWrapper } from 'simple-react-lightbox'
 
 const ListingItem = ({ match }) => {
   const [data, setData] = useState({})
@@ -50,73 +51,57 @@ const ListingItem = ({ match }) => {
             </Row>
 
             <div className='row justify-content-md-center'>
-              <div className='card-columns'>
-                <div className='card'>
-                  <Image
-                    className='img-thumbnail'
-                    src={data.photo_1}
-                    alt='Listing'
-                  />
-                  <div className='caption'>
-                    <h3>Image 1</h3>
+              <SRLWrapper>
+                <div className='card-columns'>
+                  <div className='card'>
+                    <Image
+                      className='img-thumbnail'
+                      src={data.photo_1}
+                      alt='Listing 1'
+                    />
                   </div>
-                </div>
 
-                <div className='card'>
-                  <Image
-                    className='img-thumbnail'
-                    src={data.photo_2}
-                    alt='Listing'
-                  />
-                  <div className='caption'>
-                    <h3>Image 2</h3>
+                  <div className='card'>
+                    <Image
+                      className='img-thumbnail'
+                      src={data.photo_2}
+                      alt='Listing 2'
+                    />
                   </div>
-                </div>
 
-                <div className='card'>
-                  <Image
-                    className='img-thumbnail'
-                    src={data.photo_3}
-                    alt='Listing'
-                  />
-                  <div className='caption'>
-                    <h3>Image 3</h3>
+                  <div className='card'>
+                    <Image
+                      className='img-thumbnail'
+                      src={data.photo_3}
+                      alt='Listing 3'
+                    />
                   </div>
-                </div>
 
-                <div className='card'>
-                  <Image
-                    className='img-thumbnail'
-                    src={data.photo_4}
-                    alt='Listing'
-                  />
-                  <div className='caption'>
-                    <h3>Image 4</h3>
+                  <div className='card'>
+                    <Image
+                      className='img-thumbnail'
+                      src={data.photo_4}
+                      alt='Listing 4'
+                    />
                   </div>
-                </div>
 
-                <div className='card'>
-                  <Image
-                    className='img-thumbnail'
-                    src={data.photo_5}
-                    alt='Listing'
-                  />
-                  <div className='caption'>
-                    <h3>Image 5</h3>
+                  <div className='card'>
+                    <Image
+                      className='img-thumbnail'
+                      src={data.photo_5}
+                      alt='Listing 5'
+                    />
                   </div>
-                </div>
 
-                <div className='card'>
-                  <Image
-                    className='img-thumbnail'
-                    src={data.photo_6}
-                    alt='Listing'
-                  />
-                  <div className='caption'>
-                    <h3>Image 6</h3>
+                  <div className='card'>
+                    <Image
+                      className='img-thumbnail'
+                      src={data.photo_6}
+                      alt='Listing 6'
+                    />
                   </div>
                 </div>
-              </div>
+              </SRLWrapper>
             </div>
           </Col>
         </Row>

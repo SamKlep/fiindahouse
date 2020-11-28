@@ -75,6 +75,11 @@
   height: 100px;
 }
 
+.card {
+  border: none;
+  align-content: center;
+}
+
 @media (max-width: 991px) {
   #showcase {
     padding-top: 4rem;

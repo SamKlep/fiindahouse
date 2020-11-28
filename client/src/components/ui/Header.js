@@ -1,40 +1,40 @@
 import React from 'react'
-import { Navbar, Nav, Image } from 'react-bootstrap'
+import { Navbar, Nav, Image, Container, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
     <div>
       <Nav id='top-bar' class='p-3'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-4'>
-              <i class='fas fa-phone'></i> (713)-555-5555
-            </div>
-            <div class='col-md-4'>
-              <i class='fas fa-envelope-open'></i> contact@findahouse.info
-            </div>
-            <div class='col-md-4'>
-              <div class='social text-right'>
+        <Container>
+          <Row>
+            <Col md={4}>
+              <i className='fas fa-phone'></i> (713)-555-5555
+            </Col>
+            <Col md={4}>
+              <i className='fas fa-envelope-open'></i> contact@findahouse.info
+            </Col>
+            <Col md={4}>
+              <div className='social text-right'>
                 <a href='https'>
-                  <i class='fab fa-twitter'></i>
+                  <i className='fab fa-twitter'></i>
                 </a>
                 <a href='https://twitter.com/'>
-                  <i class='fab fa-facebook'></i>
+                  <i className='fab fa-facebook'></i>
                 </a>
                 <a href='https://facebook.com/'>
-                  <i class='fab fa-linkedin'></i>
+                  <i className='fab fa-linkedin'></i>
                 </a>
                 <a href='https://instagram.com/'>
-                  <i class='fab fa-instagram'></i>
+                  <i className='fab fa-instagram'></i>
                 </a>
                 <a href='https://pinterest.com/'>
-                  <i class='fab fa-pinterest'></i>
+                  <i className='fab fa-pinterest'></i>
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </Nav>
       <Navbar variant='dark' bg='dark' expand='lg'>
         <Navbar.Brand href='/'>
