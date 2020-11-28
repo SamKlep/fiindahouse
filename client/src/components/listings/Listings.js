@@ -116,7 +116,7 @@ const Listings = () => {
                 </div>
               </div>
               <hr />
-              <Link to={`/listings/${listing._id}`}>
+              <Link to={`/listing/${listing._id}`}>
                 <Button className='btn btn-primary btn-block'>More Info</Button>
               </Link>
             </div>

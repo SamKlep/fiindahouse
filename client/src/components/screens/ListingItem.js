@@ -48,6 +48,76 @@ const ListingItem = ({ match }) => {
                 </ListGroup>
               </Col>
             </Row>
+
+            <div className='row justify-content-md-center'>
+              <div className='card-columns'>
+                <div className='card'>
+                  <Image
+                    className='img-thumbnail'
+                    src={data.photo_1}
+                    alt='Listing'
+                  />
+                  <div className='caption'>
+                    <h3>Image 1</h3>
+                  </div>
+                </div>
+
+                <div className='card'>
+                  <Image
+                    className='img-thumbnail'
+                    src={data.photo_2}
+                    alt='Listing'
+                  />
+                  <div className='caption'>
+                    <h3>Image 2</h3>
+                  </div>
+                </div>
+
+                <div className='card'>
+                  <Image
+                    className='img-thumbnail'
+                    src={data.photo_3}
+                    alt='Listing'
+                  />
+                  <div className='caption'>
+                    <h3>Image 3</h3>
+                  </div>
+                </div>
+
+                <div className='card'>
+                  <Image
+                    className='img-thumbnail'
+                    src={data.photo_4}
+                    alt='Listing'
+                  />
+                  <div className='caption'>
+                    <h3>Image 4</h3>
+                  </div>
+                </div>
+
+                <div className='card'>
+                  <Image
+                    className='img-thumbnail'
+                    src={data.photo_5}
+                    alt='Listing'
+                  />
+                  <div className='caption'>
+                    <h3>Image 5</h3>
+                  </div>
+                </div>
+
+                <div className='card'>
+                  <Image
+                    className='img-thumbnail'
+                    src={data.photo_6}
+                    alt='Listing'
+                  />
+                  <div className='caption'>
+                    <h3>Image 6</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
           </Col>
         </Row>
       </Container>
