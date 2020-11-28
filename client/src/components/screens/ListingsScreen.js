@@ -1,11 +1,18 @@
 import React from 'react'
 import Listings from '../listings/Listings'
+import { Container, Row, Col } from 'react-bootstrap'
 
 const FeaturedScreen = () => {
   return (
-    <div>
-      <Listings />
-    </div>
+    <>
+      <Container>
+        <Row>
+          <Col>
+            <Listings />
+          </Col>
+        </Row>
+      </Container>
+    </>
   )
 }
 
