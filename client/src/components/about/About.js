@@ -1,6 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 const About = () => {
+  const [data, setData] = useState([])
+  const [loading, setLoading] = useState([])
+
+  useEffect(() => {
+    setLoading(true)
+    axios
+      .get(`/api/realtors/5fc18c858cc7bd74132b0ab9`)
+      .then((response) => {
+        setData(response.data)
+        console.log(response.data)
+        setLoading(false)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }, [])
+
+  if (loading) {
+    return <p>Loading listings...</p>
+  }
   return (
     <div>
       <section id='about' className='py-4'>
@@ -21,17 +42,19 @@ const About = () => {
                 eveniet harum perferendis laborum molestias quia.
               </p>
             </div>
+
             <div className='col-md-4'>
               <div className='card'>
                 <img
                   className='card-img-top'
-                  src=''
+                  src={data.photo}
                   alt='Seller of the month'
                 />
-                <div className='card-body'>
+                <div className='card-body text-center'>
                   <h5 className='card-title'>Seller Of The Month</h5>
-                  <h6 className='text-secondary'>Name</h6>
-                  <p className='card-text'></p>
+                  <h6 className='text-secondary'>{data.name}</h6>
+                  <p className='card-text'>{data.email}</p>
+                  <p className='card-text'>{data.phone}</p>
                 </div>
               </div>
             </div>

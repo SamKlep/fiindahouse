@@ -15,7 +15,7 @@ const Main = () => {
         <div className='container'>
           <div className='row text-center'>
             <div className='col-md-12'>
-              <h1 className='display-4'>About BT Real Estate</h1>
+              <h1 className='display-4'>About FH Real Estate</h1>
               <p className='lead'>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt,
                 pariatur!
