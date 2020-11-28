@@ -8,7 +8,7 @@ import {
   createUser,
 } from '../controllers/userController.js'
 
-const router = express.Router()
+const router = express.Router({ mergeParams: true })
 
 router.route('/').get(getUsers).post(createUser)
 
