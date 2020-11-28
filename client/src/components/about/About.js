@@ -8,7 +8,7 @@ const About = () => {
   useEffect(() => {
     setLoading(true)
     axios
-      .get(`/api/realtors/5fc18c858cc7bd74132b0ab9`)
+      .get(`/api/realtors/5fc1d1c4def0c2a8d35229d5`)
       .then((response) => {
         setData(response.data)
         console.log(response.data)

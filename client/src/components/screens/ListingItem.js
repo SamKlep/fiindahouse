@@ -7,14 +7,14 @@ const ListingItem = ({ match }) => {
   const [data, setData] = useState({})
 
   useEffect(() => {
-    const fetchSerials = async () => {
+    const fetchListing = async () => {
       const { data } = await axios.get(`/api/listings/${match.params.id}`)
 
       console.log(data)
       setData(data)
     }
 
-    fetchSerials()
+    fetchListing()
     // eslint-disable-next-line
   }, [match])
 

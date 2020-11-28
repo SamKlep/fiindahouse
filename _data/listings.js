@@ -29,6 +29,7 @@ const listings = [
     photo_6:
       'https://photos.zillowstatic.com/fp/701ca2b0f1a0ae503dea1045bbece43a-p_h.jpg',
     is_Published: false,
+    realtor: 'John Edwards',
   },
   {
     title: 'Waterfront Terrace',
@@ -60,6 +61,7 @@ const listings = [
     photo_6:
       'https://photos.zillowstatic.com/fp/89f2c6a0bd3d78496437c8672935c619-uncropped_scaled_within_1536_1152.webp',
     is_Published: false,
+    realtor: 'Alice Ximena',
   },
   {
     title: 'Homefront Terrace',
@@ -91,6 +93,7 @@ const listings = [
     photo_6:
       'https://photos.zillowstatic.com/fp/89f2c6a0bd3d78496437c8672935c619-uncropped_scaled_within_1536_1152.webp',
     is_Published: false,
+    realtor: 'James Dillon',
   },
 ]
 

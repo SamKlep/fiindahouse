@@ -2,11 +2,9 @@ import mongoose from 'mongoose'
 import slugify from 'slugify'
 
 const listingSchema = mongoose.Schema({
-  // realtor: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: 'Realtor',
-  //   required: true,
-  // },
+  realtor: {
+    type: String,
+  },
   title: {
     type: String,
     required: [true, 'Please add a title'],
