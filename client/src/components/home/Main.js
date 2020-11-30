@@ -11,9 +11,9 @@ const Main = () => {
             <div className='overlay p-5'>
               <h1 className='display-4 mb-4'>Find Your Dream Home Today</h1>
               <p className='lead'>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Recusandae quas, asperiores eveniet vel nostrum magnam
-                voluptatum tempore! Consectetur, id commodi!
+                Check out all of the newest homes for sale in the area of your
+                choice, and tailored to your needs! Have one of our Realtors to
+                find you a new home.
               </p>
               <div className='search'>
                 <form action=''>
