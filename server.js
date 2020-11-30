@@ -20,6 +20,16 @@ import authRoutes from './routes/authRoutes.js'
 
 const app = express()
 
+// Serve static assets in production
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build')) // serve the static react app
+  app.get(/^\/(?!api).*/, (req, res) => {
+    // don't serve api routes to react app
+    res.sendFile(path.join(__dirname, './client/build/index.html'))
+  })
+  console.log('Serving React App...')
+}
+
 // Body parser
 app.use(express.json())
 
@@ -30,10 +40,6 @@ if (process.env.NODE_ENV === 'development') {
 
 // Set static folder
 app.use(express.static(path.join(import.meta.url, 'public')))
-
-app.get('/', (req, res) => {
-  res.send('API is running...')
-})
 
 app.use('/api/listings', listingRoutes)
 app.use('/api/realtors', realtorRoutes)
